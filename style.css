@@ -47,6 +47,24 @@ z-index: 1;
     gap: 10px;
     align-items: center;
 }
+.explore{
+    position:relative;
+    cursor:pointer;
+}
+.explore__popup{
+    position: absolute;
+    background-color:white;
+    border: 2px solid white;
+    padding:10px;
+    top: 15%;
+    width: 100px;
+    right: 0;
+    display: none;
+
+}
+.explore:hover .explore__popup{
+    display: block;
+}
 .mylearning{
     position: relative;
     cursor: pointer;
@@ -78,7 +96,16 @@ z-index: 1;
     color: white;
     padding: 10px;
     border-radius: 30px;
+    cursor: pointer;
+    border: solid 2px rgb(179, 108, 246);
 
+
+}
+.categories p:hover{
+    background-color: transparent;
+    transition: 2s;
+    color: black;
+    border: solid rgb(179, 108, 246) 2px;
 }
 .sale-image{
     position: relative;
@@ -95,18 +122,34 @@ z-index: 1;
     position: absolute;
     top:15%;
     left:10%;
-    
+    animation-name: zoom;
+    animation-duration: 2s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 }
+@keyframes zoom{
+    0%{
+         opacity: 0;
+         transform: scale(0);
 
+    }
+    100%{
+        opacity:1;
+        transform: scale(1);
+
+
+    }
+}
 .recommended{
     padding: 10px;
-
+    
 }
 .recommended__container{
     display: flex;
     justify-content: space-around;
     margin-top: 10px;
     flex-wrap: wrap;
+    cursor: pointer;
 
 }
 .course-card{
